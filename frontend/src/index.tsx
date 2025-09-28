@@ -6,7 +6,7 @@ import { AuthProvider } from "./context/auth";
 
 import { Home } from "./components/home";
 import { Login } from "./components/login";
-import { NotProtected } from "./components/protected";
+import { NotProtected, Protected } from "./components/protected";
 
 import "./index.scss";
 
@@ -24,8 +24,11 @@ render(
       <MetaProvider>
         <Router>
           <AuthProvider>
-            <Route component={NotProtected}>
+            <Route component={Protected}>
               <Route path="/" component={Home} />
+            </Route>
+
+            <Route component={NotProtected}>
               <Route path="/login" component={Login} />
             </Route>
           </AuthProvider>
