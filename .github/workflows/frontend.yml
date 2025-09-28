@@ -5,6 +5,7 @@ on:
       - main
     paths:
       - frontend/**
+      - ".github/workflows/frontend.yaml"
 
 defaults:
   run:
@@ -42,5 +43,5 @@ jobs:
       - name: Run build
         run: npm run build
 
-      - name: Deploy S3 bucket
+      - name: Deploy to S3 bucket
         run: aws s3 sync ./dist s3://cybrd-inventory-frontend --delete
