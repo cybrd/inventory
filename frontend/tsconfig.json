@@ -12,5 +12,5 @@
     "noEmit": true,
     "isolatedModules": true
   },
-  "include": ["src/**/*", "./eslint.config.mjs", "./vite.config.ts"]
+  "include": ["src/**/*"]
 }
