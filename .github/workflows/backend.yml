@@ -31,7 +31,7 @@ jobs:
         with:
           node-version: 24
 
-      - name: npm ci
+      - name: Clean install
         run: npm ci
 
       - name: Create env file
@@ -46,6 +46,7 @@ jobs:
       - name: Deploy Lambda Function
         uses: aws-actions/aws-lambda-deploy@v1.1.0
         with:
+          role: ${{ secrets.AWS_ROLE_TO_ASSUME }}
           function-name: my-function-name
           code-artifacts-dir: backend/dist
           handler: index.handler
