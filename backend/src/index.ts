@@ -4,11 +4,11 @@ import { sum } from "./services/sum";
 
 const api = createAPI();
 
-api.get("/", (_req: Request, res: Response) => {
-  res.status(500);
+api.get("/", (_req: Request, _res: Response) => {
+  return "test";
 });
 
-api.get("/sum", (_req: Request, res: Response) => {
+api.get("/sum", (req: Request, res: Response) => {
   res.send(sum(1, 2));
 });
 

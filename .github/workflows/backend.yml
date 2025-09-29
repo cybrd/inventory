@@ -49,5 +49,4 @@ jobs:
           role: ${{ secrets.AWS_ROLE_TO_ASSUME }}
           function-name: my-function-name
           code-artifacts-dir: backend/dist
-          handler: index.handler
           runtime: nodejs22.x
