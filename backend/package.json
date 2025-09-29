@@ -3,14 +3,20 @@
   "version": "0.0.0",
   "description": "",
   "scripts": {
-    "build": "npx rimraf ./dist && npx tsc"
+    "build": "npx rimraf ./dist && npx rollup -c"
   },
   "license": "MIT",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.6",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.4",
     "@types/aws-lambda": "^8.10.152",
     "@types/node": "^24.5.2",
     "eslint": "^9.36.0",
     "rimraf": "^6.0.1",
+    "rollup": "^4.52.3",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.44.1"
   },
